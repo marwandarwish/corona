@@ -32,9 +32,9 @@ class Corona:
 		for i in self.cases:
 			self.span = i.find("span")
 			self.data.append(self.span.string)
-		print(f"total cases is : {self.data[0]}")
-		print(f"total Deaths is : {self.data[1]}")
-		print(f"total Recovered is : {self.data[2]}")
+		print(f"total cases 🤒 is : {self.data[0]}")
+		print(f"total Deaths 😔 is : {self.data[1]}")
+		print(f"total Recovered 😇 is : {self.data[2]}")
         
 
 
