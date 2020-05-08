@@ -1,10 +1,14 @@
 #Imports
 import requests
 from bs4 import BeautifulSoup
-#import pandas as pd
+import time
+
 
 class Corona:
 	def __init__(self):
+		print("Made By : Marwan Darwish")
+		time.sleep(1)
+
     #input from user
 		contry = str(input("Enter the contry : "))
     
@@ -33,27 +37,10 @@ class Corona:
 		print(f"total Recovered is : {self.data[2]}")
         
 
-	def exportData(self):
-		#Export the data to cvs file
-		self.df = pd.DataFrame(
 
-
-									{
-
-											"CoronaData" : self.data
-
-									}
-
-
-			)
-
-		self.df.index = ["Cases" , "Deaths" , "Recovered"]
-
-		self.df.to_csv("Corona.csv")
 
 
 
 if __name__ == "__main__":
 	c = Corona()
 	c.findData()
-	# c.exportData()
